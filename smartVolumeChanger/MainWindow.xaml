@@ -1,0 +1,63 @@
+﻿<Window x:Class="smartVolumeChanger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:smartVolumeChanger"
+        mc:Ignorable="d"
+        Background="Gray"
+        Title="MainWindow" Height="720" Width="1280">
+    <Grid x:Name="grid_mainWindow">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="btn_preset0" Grid.Row="0" Grid.Column="0" Content="preset 0"/>
+        <Button x:Name="btn_preset1" Grid.Row="1" Grid.Column="0" Content="preset 1"/>
+        <Button x:Name="btn_preset2" Grid.Row="2" Grid.Column="0" Content="preset 2"/>
+        <Button x:Name="btn_preset3" Grid.Row="3" Grid.Column="0" Content="preset 3"/>
+        <Button x:Name="btn_preset4" Grid.Row="4" Grid.Column="0" Content="preset 4"/>
+        <Button x:Name="btn_preset5" Grid.Row="5" Grid.Column="0" Content="preset 5"/>
+
+        <Grid Grid.Column="1" Grid.RowSpan="12">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            
+        </Grid>
+    </Grid>
+</Window>
