@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:smartVolumeChanger"
         mc:Ignorable="d"
         Background="Gray"
-        Title="MainWindow" Height="720" Width="1280">
+        Title="MainWindow" Height="720" Width="1280" WindowStyle="None" ResizeMode="NoResize" MouseDown="Window_MouseDown">
     <Grid x:Name="grid_mainWindow">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -20,15 +20,17 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="6*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="btn_preset0" Grid.Row="0" Grid.Column="0" Content="preset 0" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset0_Click"/>
-        <Button x:Name="btn_preset1" Grid.Row="1" Grid.Column="0" Content="preset 1" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset1_Click"/>
-        <Button x:Name="btn_preset2" Grid.Row="2" Grid.Column="0" Content="preset 2" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset2_Click"/>
-        <Button x:Name="btn_preset3" Grid.Row="3" Grid.Column="0" Content="preset 3" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset3_Click"/>
-        <Button x:Name="btn_preset4" Grid.Row="4" Grid.Column="0" Content="preset 4" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset4_Click"/>
-        <Button x:Name="btn_preset5" Grid.Row="5" Grid.Column="0" Content="preset 5" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset5_Click"/>
+        <Button x:Name="btn_preset0" Grid.Row="1" Grid.Column="0" Content="preset 0" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset0_Click"/>
+        <Button x:Name="btn_preset1" Grid.Row="2" Grid.Column="0" Content="preset 1" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset1_Click"/>
+        <Button x:Name="btn_preset2" Grid.Row="3" Grid.Column="0" Content="preset 2" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset2_Click"/>
+        <Button x:Name="btn_preset3" Grid.Row="4" Grid.Column="0" Content="preset 3" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset3_Click"/>
+        <Button x:Name="btn_preset4" Grid.Row="5" Grid.Column="0" Content="preset 4" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset4_Click"/>
+        <Button x:Name="btn_preset5" Grid.Row="6" Grid.Column="0" Content="preset 5" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset5_Click"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="12">
             <Grid.ColumnDefinitions>
@@ -45,16 +47,16 @@
             </Grid.ColumnDefinitions>
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
-                <RowDefinition Height="1*"/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="70.404"/>
             </Grid.RowDefinitions>
 
             <Border Grid.Row="2" Grid.Column="2"/>
@@ -89,6 +91,7 @@
             <Label x:Name="label_program7" Grid.Row="8" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program7_MouseLeftButtonDown"/>
             <Slider x:Name="slider_7" Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" Maximum="100" SmallChange="1" ValueChanged="slider_7_ValueChanged"/>
             <TextBox x:Name="textBox_7" Grid.Row="8" Grid.Column="6" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+            <Button x:Name="btn_exit" Content="X" Grid.Column="9" HorizontalAlignment="Right" Height="28" VerticalAlignment="Top" Width="35" Background="#FF473434" Click="btn_exit_Click"/>
 
         </Grid>
     </Grid>

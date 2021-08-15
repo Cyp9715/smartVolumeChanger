@@ -1,15 +1,16 @@
 ﻿using CSCore.CoreAudioAPI;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace smartVolumeChanger
 {
-    class volumeChanger
+    static class volumeChanger
     {
-        public void init()
+        public static void init()
         {
             using (AudioSessionManager2 sessionManager = GetDefaultAudioSessionManager2(DataFlow.Render))
             {
@@ -23,7 +24,7 @@ namespace smartVolumeChanger
                         using (var sessionControl = session.QueryInterface<AudioSessionControl2>())
                         {
                             sortedDic.Add(sessionControl.ProcessID, sessionControl.Process.ProcessName);
-                            Console.WriteLine(sessionControl.Process.ProcessName);
+                            Debug.WriteLine(sessionControl.Process.ProcessName);
                         }
                     }
                 }

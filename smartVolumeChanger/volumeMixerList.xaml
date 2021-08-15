@@ -1,4 +1,4 @@
-﻿<Window x:Class="smartVolumeChanger.volumeMixer"
+﻿<Window x:Name="view_volumeMixer" x:Class="smartVolumeChanger.volumeMixer"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,4 +6,5 @@
         xmlns:local="clr-namespace:smartVolumeChanger"
         mc:Ignorable="d"
         Title="volumeMixer" Height="600 " Width="450">
+    <ListBox x:Name="listBox_currentProcess" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
 </Window>

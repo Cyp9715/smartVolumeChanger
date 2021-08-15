@@ -23,9 +23,9 @@ namespace smartVolumeChanger
     {
         /* class */
         PageManager pageManager;
-        
+
         /* view */
-        volumeMixer volumeMixer = new volumeMixer();
+        volumeMixer volumeMixer;
 
         public MainWindow()
         {
@@ -35,9 +35,8 @@ namespace smartVolumeChanger
 
         void init()
         {
-            Slider slider = new Slider();
-            RowDefinition rd2 = new RowDefinition();
             pageManager = new PageManager(updateSlider);
+            volumeMixer = new volumeMixer();
         }
 
         private void slider_0_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
@@ -289,5 +288,15 @@ namespace smartVolumeChanger
 
         }
 
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.RightButton != MouseButtonState.Pressed) 
+                DragMove();
+        }
+
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }
