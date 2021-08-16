@@ -14,6 +14,7 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
@@ -22,15 +23,16 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
-            <RowDefinition Height="5*"/>
         </Grid.RowDefinitions>
 
-        <Button x:Name="btn_preset0" Grid.Row="1" Grid.Column="0" Content="preset 0" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset0_Click"/>
-        <Button x:Name="btn_preset1" Grid.Row="2" Grid.Column="0" Content="preset 1" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset1_Click"/>
-        <Button x:Name="btn_preset2" Grid.Row="3" Grid.Column="0" Content="preset 2" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset2_Click"/>
-        <Button x:Name="btn_preset3" Grid.Row="4" Grid.Column="0" Content="preset 3" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset3_Click"/>
-        <Button x:Name="btn_preset4" Grid.Row="5" Grid.Column="0" Content="preset 4" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset4_Click"/>
-        <Button x:Name="btn_preset5" Grid.Row="6" Grid.Column="0" Content="preset 5" Width="180" Height="50" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset5_Click"/>
+        <Button x:Name="btn_preset0" Grid.Row="1" Grid.Column="0" Content="preset 1" Width="180" Height="60" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset0_Click"/>
+        <Button x:Name="btn_preset1" Grid.Row="2" Grid.Column="0" Content="preset 2" Width="180" Height="60" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset1_Click"/>
+        <Button x:Name="btn_preset2" Grid.Row="3" Grid.Column="0" Content="preset 3" Width="180" Height="60" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset2_Click"/>
+        <Button x:Name="btn_preset3" Grid.Row="4" Grid.Column="0" Content="preset 4" Width="180" Height="60" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset3_Click"/>
+        <Button x:Name="btn_preset4" Grid.Row="5" Grid.Column="0" Content="preset 5" Width="180" Height="60" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset4_Click"/>
+        <Button x:Name="btn_preset5" Grid.Row="6" Grid.Column="0" Content="preset 6" Width="180" Height="60" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset5_Click"/>
+        <Button x:Name="btn_preset6" Grid.Row="7" Grid.Column="0" Content="preset 7" Width="180" Height="60" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset6_Click"/>
+        <Button x:Name="btn_preset7" Grid.Row="8" Grid.Column="0" Content="preset 8" Width="180" Height="60" Background="#FF36393F" BorderBrush="#FF36393F" Foreground="#FF837777" Click="btn_preset7_Click"/>
 
         <Grid Grid.Column="1" Grid.RowSpan="12">
             <Grid.ColumnDefinitions>
@@ -59,39 +61,40 @@
                 <RowDefinition Height="70.404"/>
             </Grid.RowDefinitions>
 
+            <Button x:Name="btn_exit" Content="X" Grid.Column="9" HorizontalAlignment="Right" Height="28" VerticalAlignment="Top" Width="35" Background="#FF473434" Click="btn_exit_Click"/>
+
             <Border Grid.Row="2" Grid.Column="2"/>
-            <Label x:Name="label_program0" Grid.Row="1" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program0_MouseLeftButtonDown"/>
+            <Label x:Name="label_program0" Grid.Row="1" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program0_MouseLeftButtonDown" x:FieldModifier="public"/>
             <Slider x:Name="slider_0" Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" Maximum="100" SmallChange="1" ValueChanged="slider_0_ValueChanged"/>
             <TextBox x:Name="textBox_0" Grid.Row="1" Grid.Column="6" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" PreviewTextInput="textBox_0_PreviewTextInput" Text="0" RenderTransformOrigin="0.5,0.5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-            <Label x:Name="label_program1" Grid.Row="2" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program1_MouseLeftButtonDown"/>
+            <Label x:Name="label_program1" Grid.Row="2" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program1_MouseLeftButtonDown" x:FieldModifier="public"/>
             <Slider x:Name="slider_1" Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" Maximum="100" SmallChange="1" ValueChanged="slider_1_ValueChanged"/>
             <TextBox x:Name="textBox_1" Grid.Row="2" Grid.Column="6" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-            <Label x:Name="label_program2" Grid.Row="3" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program2_MouseLeftButtonDown"/>
+            <Label x:Name="label_program2" Grid.Row="3" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program2_MouseLeftButtonDown" x:FieldModifier="public"/>
             <Slider x:Name="slider_2" Grid.Row="3" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" Maximum="100" SmallChange="1" ValueChanged="slider_2_ValueChanged"/>
             <TextBox x:Name="textBox_2" Grid.Row="3" Grid.Column="6" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-            <Label x:Name="label_program3" Grid.Row="4" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Label x:Name="label_program3" Grid.Row="4" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program3_MouseLeftButtonDown" x:FieldModifier="public"/>
             <Slider x:Name="slider_3" Grid.Row="4" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" SmallChange="1" Maximum="100" ValueChanged="slider_3_ValueChanged"/>
             <TextBox x:Name="textBox_3" Grid.Row="4" Grid.Column="6" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-            <Label x:Name="label_program4" Grid.Row="5" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program4_MouseLeftButtonDown"/>
+            <Label x:Name="label_program4" Grid.Row="5" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program4_MouseLeftButtonDown" x:FieldModifier="public"/>
             <Slider x:Name="slider_4" Grid.Row="5" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" Maximum="100" SmallChange="0" ValueChanged="slider_4_ValueChanged"/>
             <TextBox x:Name="textBox_4" Grid.Row="5" Grid.Column="6" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-            <Label x:Name="label_program5" Grid.Row="6" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program5_MouseLeftButtonDown"/>
+            <Label x:Name="label_program5" Grid.Row="6" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program5_MouseLeftButtonDown" x:FieldModifier="public" />
             <Slider x:Name="slider_5" Grid.Row="6" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" Maximum="100" SmallChange="1" ValueChanged="slider_5_ValueChanged"/>
             <TextBox x:Name="textBox_5" Grid.Row="6" Grid.Column="6" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-            <Label x:Name="label_program6" Grid.Row="7" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program6_MouseLeftButtonDown"/>
+            <Label x:Name="label_program6" Grid.Row="7" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program6_MouseLeftButtonDown" x:FieldModifier="public"/>
             <Slider x:Name="slider_6" Grid.Row="7" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" Maximum="100" SmallChange="1" ValueChanged="slider_6_ValueChanged"/>
             <TextBox x:Name="textBox_6" Grid.Row="7" Grid.Column="6" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
 
-            <Label x:Name="label_program7" Grid.Row="8" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program7_MouseLeftButtonDown"/>
+            <Label x:Name="label_program7" Grid.Row="8" Grid.Column="1" Content="empty" HorizontalAlignment="Center" VerticalAlignment="Center" MouseLeftButtonDown="label_program7_MouseLeftButtonDown" x:FieldModifier="public"/>
             <Slider x:Name="slider_7" Grid.Row="8" Grid.Column="3" Grid.ColumnSpan="3" VerticalAlignment="Center" Maximum="100" SmallChange="1" ValueChanged="slider_7_ValueChanged"/>
             <TextBox x:Name="textBox_7" Grid.Row="8" Grid.Column="6" Width="50" Height="20" VerticalAlignment="Center" HorizontalAlignment="Center" Text="0" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-            <Button x:Name="btn_exit" Content="X" Grid.Column="9" HorizontalAlignment="Right" Height="28" VerticalAlignment="Top" Width="35" Background="#FF473434" Click="btn_exit_Click"/>
 
         </Grid>
     </Grid>

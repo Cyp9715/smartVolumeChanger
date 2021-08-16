@@ -8,6 +8,15 @@ namespace smartVolumeChanger
 {
     class Page
     {
+        public string id_0 = "null";
+        public string id_1 = "null";
+        public string id_2 = "null";
+        public string id_3 = "null";
+        public string id_4 = "null";
+        public string id_5 = "null";
+        public string id_6 = "null";
+        public string id_7 = "null";
+
         public int slider_0 = 0;
         public int slider_1 = 0;
         public int slider_2 = 0;
@@ -16,12 +25,11 @@ namespace smartVolumeChanger
         public int slider_5 = 0;
         public int slider_6 = 0;
         public int slider_7 = 0;
-        public int slider_8 = 0;
     }
 
     class PageManager
     {
-        public delegate void delUpdateSlider(List<int> slider);
+        public delegate void delUpdateSlider(List<string> label, List<int> slider);
 
         delUpdateSlider sliderUpdate;
 
@@ -44,18 +52,28 @@ namespace smartVolumeChanger
 
         public void updatePage(Page page)
         {
-            List<int> material = new List<int>();
+            List<int> list_slider = new List<int>();
+            List<string> list_label = new List<string>();
 
-            material.Add(page.slider_0);
-            material.Add(page.slider_1);
-            material.Add(page.slider_2);
-            material.Add(page.slider_3);
-            material.Add(page.slider_4);
-            material.Add(page.slider_5);
-            material.Add(page.slider_6);
-            material.Add(page.slider_7);
+            list_label.Add(page.id_0);
+            list_label.Add(page.id_1);
+            list_label.Add(page.id_2);
+            list_label.Add(page.id_3);
+            list_label.Add(page.id_4);
+            list_label.Add(page.id_5);
+            list_label.Add(page.id_6);
+            list_label.Add(page.id_7);
 
-            sliderUpdate(material);
+            list_slider.Add(page.slider_0);
+            list_slider.Add(page.slider_1);
+            list_slider.Add(page.slider_2);
+            list_slider.Add(page.slider_3);
+            list_slider.Add(page.slider_4);
+            list_slider.Add(page.slider_5);
+            list_slider.Add(page.slider_6);
+            list_slider.Add(page.slider_7);
+
+            sliderUpdate(list_label, list_slider);
         }
     }
 }
