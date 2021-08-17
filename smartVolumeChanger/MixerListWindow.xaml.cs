@@ -21,9 +21,9 @@ namespace smartVolumeChanger
     /// </summary>
     public partial class MixerListWindow : Window
     {
-        System.Windows.Threading.DispatcherTimer timer;
+        private System.Windows.Threading.DispatcherTimer timer;
         public delegate void _delUpdateLabelText(string str);
-        _delUpdateLabelText _updateLabelText;
+        private _delUpdateLabelText _updateLabelText;
 
         public MixerListWindow(_delUpdateLabelText updateTextBox)
         {
@@ -42,26 +42,28 @@ namespace smartVolumeChanger
 
         public async void updateProcess(object sender, EventArgs e)
         {
-            SortedDictionary<int, string> mixList = default;
+            SortedDictionary<string, int> mixList = default;
             var task = Task.Run(() =>
             {
                 mixList = volumeChanger.update();
             });
             await task;
 
-            listBox_processList.Items.Clear();
+            listBox_processList_name.Items.Clear();
+            listBox_processList_volume.Items.Clear();
 
             foreach (var i in mixList)
             {
                 ListBoxItem itm = new ListBoxItem();
-                itm.Content = i.Value;
-                listBox_processList.Items.Add(itm);
+                itm.Content = i.Key;
+                listBox_processList_name.Items.Add(i.Key);
+                listBox_processList_volume.Items.Add(i.Value);
             }
         }
 
         private void btn_exit_Click(object sender, RoutedEventArgs e)
         {
-            view_processList.Hide();
+            window_mixList.Hide();
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -70,12 +72,17 @@ namespace smartVolumeChanger
                 DragMove();
         }
 
-        private void listBox_processList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void window_mixList_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            ListBoxItem lbi = ((sender as ListBox).SelectedItem as ListBoxItem);
-            if(lbi is not null)
+            DragMove();
+        }
+
+        private void listBox_processList_name_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string lbi = (string)((sender as ListBox).SelectedItem);
+            if (lbi is not null)
             {
-                _updateLabelText(lbi.Content.ToString());
+                _updateLabelText(lbi);
                 this.Hide();
             }
         }

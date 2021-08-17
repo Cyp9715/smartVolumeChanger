@@ -10,9 +10,9 @@ namespace smartVolumeChanger
 {
     static class volumeChanger
     {
-        public static SortedDictionary<int, string> sortedDic = new SortedDictionary<int, string>();
-
-        public static SortedDictionary<int, string> update()
+        // <string, int> => ProcessName, Process
+        public static SortedDictionary<string, int> sortedDic = new SortedDictionary<string, int>();
+        public static SortedDictionary<string, int> update()
         {
             sortedDic.Clear();
 
@@ -25,7 +25,7 @@ namespace smartVolumeChanger
                         using (var simpleVolume = session.QueryInterface<SimpleAudioVolume>())
                         using (var sessionControl = session.QueryInterface<AudioSessionControl2>())
                         {
-                            sortedDic.Add(sessionControl.ProcessID, sessionControl.Process.ProcessName);
+                            sortedDic.Add(sessionControl.Process.ProcessName, (int)(simpleVolume.MasterVolume * 100));
                         }
                     }
 

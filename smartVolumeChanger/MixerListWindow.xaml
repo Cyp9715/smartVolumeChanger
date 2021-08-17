@@ -1,19 +1,26 @@
-﻿<Window x:Name="view_processList" x:Class="smartVolumeChanger.MixerListWindow"
+﻿<Window x:Name="window_mixList" x:Class="smartVolumeChanger.MixerListWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:smartVolumeChanger"
         mc:Ignorable="d"
-        Title="volumeMixer" Height="600 " Width="450" WindowStyle="None" ResizeMode="NoResize">
+        Title="volumeMixer" Height="600 " Width="450" WindowStyle="None" ResizeMode="NoResize" MouseLeftButtonDown="window_mixList_MouseLeftButtonDown">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
 
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
         <Button x:Name="btn_exit" Content="X" Grid.Column="9" HorizontalAlignment="Right" Height="25" VerticalAlignment="Top" Width="35" Background="#FF473434" Click="btn_exit_Click"/>
-        <ListBox x:Name="listBox_processList" Grid.Row="1" SelectionChanged="listBox_processList_SelectionChanged"/>
+        
+        <ListBox x:Name="listBox_processList_name" Grid.Row="1" Grid.Column="0" SelectionChanged="listBox_processList_name_SelectionChanged" />
+        <ListBox x:Name="listBox_processList_volume" Grid.Row="1" Grid.Column="1" />
 
     </Grid>
 
