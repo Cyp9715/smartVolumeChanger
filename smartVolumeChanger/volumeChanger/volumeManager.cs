@@ -25,7 +25,14 @@ namespace smartVolumeChanger
                         using (var simpleVolume = session.QueryInterface<SimpleAudioVolume>())
                         using (var sessionControl = session.QueryInterface<AudioSessionControl2>())
                         {
-                            sortedDic.Add(sessionControl.Process.ProcessName, (int)(simpleVolume.MasterVolume * 100));
+                            try
+                            {
+                                sortedDic.Add(sessionControl.Process.ProcessName, (int)(simpleVolume.MasterVolume * 100));
+                            }
+                            catch (System.ArgumentException e)
+                            {
+
+                            }
                         }
                     }
 
